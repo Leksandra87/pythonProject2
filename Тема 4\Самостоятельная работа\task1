@@ -1,0 +1,15 @@
+def remove_whitespace(s):
+    a = s.split('\n')
+    st = ''
+    for i in a:
+        st += ' '.join(i.split()) + '\n'
+    st = st.strip()
+    return st
+
+
+
+
+
+str_with_space = """123.    test bks
+print   test11"""  # исходная  строка
+print(remove_whitespace(str_with_space))
