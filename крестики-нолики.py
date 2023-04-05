@@ -9,15 +9,15 @@ def show_pole():
 
 def mark_input(m):
     while True:
-        a = int(input(f'Куда поставить {m}?  '))
-        if a < 1 or a > 9:
-            print('Число должно быть от 1 до 9')
+        a = input(f'Куда поставить {m}?  ')
+        if a not in '123456789':
+            print('Введите целое число от 1 до 9')
             continue
-        elif str(pole[a - 1]).isalpha():
+        elif str(pole[int(a) - 1]).isalpha():
             print('Эта клетка уже занята. Выберите другую цифру')
             continue
         else:
-            pole[a - 1] = m
+            pole[int(a) - 1] = m
             break
 
 
