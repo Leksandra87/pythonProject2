@@ -10,7 +10,7 @@ def show_pole():
 def mark_input(m):
     while True:
         a = input(f'Куда поставить {m}?  ')
-        if a not in '123456789':
+        if a not in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             print('Введите целое число от 1 до 9')
             continue
         elif str(pole[int(a) - 1]).isalpha():
